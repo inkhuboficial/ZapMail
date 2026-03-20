@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>ZapMail</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <h1>ZapMail</h1>
+
+  <div class="menu">
+    <button onclick="toggleMenu()">⋮</button>
+    <div id="dropdown" class="dropdown">
+      <div onclick="abrirAba('login')">Login</div>
+      <div onclick="abrirAba('inbox')">Inbox</div>
+      <div onclick="abrirAba('view')">Email</div>
+      <div onclick="abrirAba('novo')">Novo</div>
+    </div>
+  </div>
+</header>
+
+<!-- ABA LOGIN -->
+<div id="login" class="aba">
+  <h2>Login</h2>
+  <input id="loginEmail" placeholder="Seu email">
+  <button onclick="fazerLogin()">Entrar</button>
+</div>
+
+<div id="inbox" class="aba"></div>
+
+<div id="view" class="aba">
+  <h2>Selecione um email</h2>
+</div>
+
+<div id="novo" class="aba">
+  <input id="para" placeholder="Para (ex: user@zapmail.com)">
+  <input id="titulo" placeholder="Título">
+  <textarea id="conteudo" placeholder="Conteúdo"></textarea>
+  <button onclick="enviarEmail()">Enviar</button>
+</div>
+
+<button class="fab" onclick="abrirAba('novo')">＋</button>
+
+<script src="app.js"></script>
+</body>
+</html>
